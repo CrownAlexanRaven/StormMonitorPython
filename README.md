@@ -46,7 +46,7 @@ cd SystemMonitorPython
 py3 -m pip install -r prerequisites.txt
 ```
 
-Run the main.py file to start it.
+Run the index.py file to start it.
 
 
 ## Future
