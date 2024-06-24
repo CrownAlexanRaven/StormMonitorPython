@@ -30,6 +30,8 @@ except Exception as failure:
     print(f'Failure: {failure}')
     exit(1)
 try:
+    for _ in range(3):
+        print('\033[1A\033[2K', end='', flush=True)
     runpy.run_path(f'{path}/{storm_processes[choice]["path"]}')
 except Exception as failure:
     print(f'Failure: {failure}')
