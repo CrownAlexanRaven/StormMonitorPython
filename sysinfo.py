@@ -1,6 +1,4 @@
-import platform
-import socket
-import psutil
+import platform, socket, psutil, functions
 from uuid import getnode as get_mac
 from colorama import Fore, Style, init
 
@@ -47,5 +45,8 @@ print(f"""{Fore.GREEN}System Information
 {Fore.YELLOW}MAC Address:{Style.RESET_ALL} {mac_address}
 {Fore.CYAN}Total Disk Space:{Style.RESET_ALL} {total_disk} GB
 {Fore.CYAN}Used Disk Space:{Style.RESET_ALL} {used_disk} GB
-{Fore.CYAN}Free Disk Space:{Style.RESET_ALL} {free_disk} GB
+{Fore.CYAN}Free Disk Space:{Style.RESET_ALL} {free_disk} GB\n\n
 """)
+
+input('Press enter to close menu.')
+functions.exit_and_retract(14)
