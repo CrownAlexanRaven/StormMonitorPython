@@ -13,7 +13,7 @@ storm_processes = [
     },
     {
         "name": "Resource Monitor",
-        "desc": "A basic ",
+        "desc": "A basic resource monitor ",
         "path": "monitor.py",
         "colour": "BLUE",
     },
