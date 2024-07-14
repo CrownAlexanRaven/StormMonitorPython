@@ -36,14 +36,6 @@ python3 -m pip install -r prerequisites.txt
 git clone --depth=1 https://github.com/CrownAlexanRaven/SystemMontiorPython.git
 cd SystemMonitorPython
 py3 -m pip install -r prerequisites.txt
-
-# OR
-
-curl -L -o main.zip https://github.com/CrownAlexanRaven/SystemMontiorPython/archive/refs/heads/main.zip
-Expand-Archive -Path main.zip -DestinationPath .\SystemMonitorPython
-del main.zip
-cd SystemMonitorPython
-py3 -m pip install -r prerequisites.txt
 ```
 
 Run the index.py file to start it.
