@@ -13,9 +13,15 @@ storm_processes = [
     },
     {
         "name": "Resource Monitor",
-        "desc": "A basic resource monitor ",
+        "desc": "A basic resource monitor.",
         "path": "monitor.py",
         "colour": "BLUE",
+    },
+    {
+        "name": "Directory Storage Analysis",
+        "desc": "Analyze file sizes in a specified directory",
+        "path": "fileStoreAnalyse.py",
+        "colour": "MAGENTA",
     },
 ]
 color_map = {
@@ -32,9 +38,7 @@ color_map = {
 path = os.path.dirname(__file__)
 
 for index, process in enumerate(storm_processes):
-    print(
-        f"{color_map[process['colour']]}[{index}={process['name']}]{Style.RESET_ALL} {process['desc']}{Style.RESET_ALL}"
-    )
+    print(f"{color_map[process['colour']]}[{index}={process['name']}]{Style.RESET_ALL} {process['desc']}{Style.RESET_ALL}")
 
 try:
     choice = int(input("Please enter your choice:"))
@@ -42,9 +46,9 @@ except Exception as failure:
     print(f"Failure: {failure}")
     exit(1)
 except KeyboardInterrupt:
-    functions.exit_and_retract(2, 0)
+    functions.exit_and_retract(len(storm_processes)+1, 0)
 try:
-    functions.retract_lines(3)
-    runpy.run_path(f'{path}/{storm_processes[choice]["path"]}')
+    functions.retract_lines(len(storm_processes)+1)
+    runpy.run_path(os.path.join(path, 'storm_processes', storm_processes[choice]["path"]))
 except Exception as failure:
     print(f"Failure: {failure}")
